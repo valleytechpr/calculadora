@@ -1,11 +1,14 @@
-/* Evitar el zoom al interactuar con los campos */
+/* Evitar el zoom en dispositivos móviles */
 input, select {
-    font-size: 16px; /* Asegúrate de que la fuente no sea demasiado pequeña */
+    font-size: 16px; /* Aseguramos que la fuente no sea muy pequeña */
+    -webkit-appearance: none;  /* Elimina el zoom en algunos dispositivos */
+    -moz-appearance: none;
+    appearance: none;
 }
 
-/* Estilo para el formulario */
+/* Estilo general para el formulario */
 #tax-calculator {
-    max-width: 500px; /* Aumento un poco el tamaño */
+    max-width: 100%;  /* Asegura que el formulario se adapte a la pantalla */
     margin: 20px auto;
     padding: 20px;
     background: #f9f9f9;
@@ -14,17 +17,22 @@ input, select {
     font-family: Arial, sans-serif;
 }
 
-/* Borde más oscuro de los campos */
+/* Borde más oscuro en los campos */
 #tax-calculator input, #tax-calculator select, #tax-calculator button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Gris más oscuro */
+    border: 1px solid #aaa; /* Gris más oscuro para el borde */
     border-radius: 5px;
     font-size: 14px;
 }
 
-/* Cambiar el color del botón */
+/* Color negro para las opciones del select */
+#tax-calculator select {
+    color: black;  /* Color negro para el texto de las opciones */
+}
+
+/* Estilo para el botón */
 #tax-calculator button {
     background: #266ea1;
     color: white;
@@ -33,17 +41,12 @@ input, select {
     transition: background 0.3s ease;
 }
 
-/* Hover del botón */
+/* Hover para el botón */
 #tax-calculator button:hover {
     background: #005bb5;
 }
 
-/* Estilo para las opciones del select */
-#tax-calculator select {
-    color: black; /* Cambia el color del texto de las opciones a negro */
-}
-
-/* Estilo de la cabecera */
+/* Estilo del título */
 h1 {
     text-align: center;
     color: #333;
@@ -51,7 +54,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Estilo para el footer */
+/* Estilo del footer */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -66,4 +69,16 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Hacer el diseño responsive para dispositivos pequeños */
+@media (max-width: 600px) {
+    #tax-calculator {
+        padding: 15px;
+        max-width: 90%;  /* Mejor ajuste en pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 20px;  /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
 }
