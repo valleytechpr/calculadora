@@ -46,6 +46,11 @@ body {
 /* Color negro para las opciones del select */
 #tax-calculator select {
     color: black;  /* Color negro para el texto de las opciones */
+    -webkit-appearance: menulist-button; /* Asegura la apariencia estándar de la flecha en Chrome/Safari */
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><path d="M2 0L0 2h4L2 0z" fill="black"/></svg>') no-repeat right 10px center;
+    background-size: 10px;
 }
 
 /* Estilo para el botón */
@@ -68,6 +73,20 @@ h1 {
     color: #333;
     font-size: 24px;
     margin: 0;
+}
+
+/* Estilo del resultado */
+#result {
+    text-align: center; /* Centra el texto dentro del resultado */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding: 10px;
+    background: #e9e9e9;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
 }
 
 /* Estilo del footer */
@@ -98,5 +117,10 @@ footer p {
 
     h1 {
         font-size: 20px;  /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+
+    #result {
+        width: 90%;  /* Asegura que el resultado también sea responsivo */
+        margin: 20px auto;
     }
 }
