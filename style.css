@@ -21,7 +21,7 @@ body {
 /* Estilo general para el formulario */
 #tax-calculator {
     max-width: 500px;  /* Tamaño máximo del formulario */
-    width: 100%;  /* Asegura que el formulario ocupe el 100% del ancho disponible */
+    width: 90%;  /* Asegura que el formulario ocupe el 90% del ancho en pantallas pequeñas */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
@@ -91,7 +91,9 @@ footer p {
 @media (max-width: 600px) {
     #tax-calculator {
         padding: 15px;
-        max-width: 90%;  /* Mejor ajuste en pantallas más pequeñas */
+        width: 90%;  /* Ajusta el ancho en pantallas pequeñas */
+        max-width: 90%;  /* Asegura que el formulario no se expanda más allá del 90% */
+        margin: 20px auto;  /* Centra el formulario */
     }
 
     h1 {
