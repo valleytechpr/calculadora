@@ -83,6 +83,23 @@ h1 {
     margin: 5px 0;
 }
 
+footer {
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado alrededor del texto */
+    background-color: #f1f1f1; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+footer p {
+    margin: 0; /* Elimina el margen para que el texto quede perfectamente centrado */
+}
+
+
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 768px) {
     /* Asegura que el formulario ocupe más espacio en pantallas pequeñas */
@@ -123,4 +140,6 @@ h1 {
         font-size: 18px;
         margin-bottom: 10px;
     }
+
+
 }
