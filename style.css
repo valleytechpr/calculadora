@@ -1,14 +1,26 @@
 /* Evitar el zoom en dispositivos móviles */
-input, select {
-    font-size: 16px; /* Aseguramos que la fuente no sea muy pequeña */
-    -webkit-appearance: none;  /* Elimina el zoom en algunos dispositivos */
+input, select, button {
+    font-size: 16px;  /* Tamaño de fuente estándar para evitar el zoom */
+    -webkit-appearance: none; /* Elimina el zoom en algunos dispositivos */
     -moz-appearance: none;
     appearance: none;
 }
 
+/* Estilo general para el body y el contenedor */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
 /* Estilo general para el formulario */
 #tax-calculator {
-    max-width: 100%;  /* Asegura que el formulario se adapte a la pantalla */
+    max-width: 500px;  /* Tamaño del formulario */
+    width: 100%;  /* Asegura que el formulario se adapte al ancho */
     margin: 20px auto;
     padding: 20px;
     background: #f9f9f9;
