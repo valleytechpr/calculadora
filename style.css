@@ -1,0 +1,126 @@
+/* Asegura que el body ocupa toda la altura de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto del body */
+    font-family: Arial, sans-serif;
+    padding: 10px; /* Espacio adicional alrededor de la página */
+}
+
+/* Título centrado */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px; /* Separación entre el título y el formulario */
+    text-align: center; /* Asegura que el título esté centrado */
+}
+
+/* Contenedor del formulario */
+#tax-calculator-container {
+    text-align: center; /* Centra todo el contenido dentro de este contenedor */
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Aumento del tamaño máximo del formulario */
+    width: 100%; /* Hace que el formulario ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    margin: 10px; /* Agrega espacio alrededor del formulario */
+}
+
+/* Estilo para las etiquetas */
+#tax-calculator label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+    width: 100%;
+}
+
+/* Estilo para los campos de entrada y selección */
+#tax-calculator input,
+#tax-calculator select,
+#tax-calculator button {
+    width: 100%;
+    padding: 12px; /* Aumento del padding para mayor tamaño */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Aumento del tamaño de la fuente */
+    box-sizing: border-box;
+    text-align: left; /* Alinea el texto dentro de los campos */
+}
+
+/* Estilo del botón */
+#tax-calculator button {
+    background: #266ea1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    font-size: 16px; /* Aumento del tamaño de la fuente del botón */
+}
+
+#tax-calculator button:hover {
+    background: #005bb5;
+}
+
+/* Estilo del resultado */
+#result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    text-align: center; /* Centra el texto dentro del resultado */
+}
+
+#result p {
+    margin: 5px 0;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Asegura que el formulario ocupe más espacio en pantallas pequeñas */
+    #tax-calculator-container {
+        padding: 20px;
+        margin: 10px;
+    }
+    /* Ajusta el tamaño de las fuentes en campos de entrada y botones */
+    #tax-calculator input,
+    #tax-calculator select,
+    #tax-calculator button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    /* Ajusta el tamaño del título */
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños (móviles) */
+@media (max-width: 480px) {
+    /* Ajusta aún más el tamaño del formulario */
+    #tax-calculator-container {
+        padding: 15px;
+        margin: 5px;
+    }
+    /* Ajusta el tamaño de las fuentes en campos de entrada y botones */
+    #tax-calculator input,
+    #tax-calculator select,
+    #tax-calculator button {
+        font-size: 12px;
+        padding: 8px;
+    }
+    /* Ajusta el tamaño del título */
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
