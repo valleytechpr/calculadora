@@ -9,9 +9,10 @@ input, select, button {
 /* Estilo general para el body y el contenedor */
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center;  /* Alinea el contenido horizontalmente */
+    align-items: center;  /* Alinea el contenido verticalmente */
+    flex-direction: column;  /* Alinea los elementos en columna (título arriba y formulario abajo) */
+    height: 100vh;  /* Hace que ocupe toda la altura de la pantalla */
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
@@ -19,24 +20,27 @@ body {
 
 /* Estilo general para el formulario */
 #tax-calculator {
-    max-width: 500px;  /* Tamaño del formulario */
-    width: 100%;  /* Asegura que el formulario se adapte al ancho */
-    margin: 20px auto;
+    max-width: 500px;  /* Tamaño máximo del formulario */
+    width: 100%;  /* Asegura que el formulario ocupe el 100% del ancho disponible */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
+    margin-top: 20px; /* Espacio entre el título y el formulario */
+    box-sizing: border-box; /* Para que el padding no aumente el tamaño total */
 }
 
 /* Borde más oscuro en los campos */
 #tax-calculator input, #tax-calculator select, #tax-calculator button {
-    width: 100%;
+    width: 100%;  /* Asegura que los campos ocupen el 100% del ancho disponible */
+    max-width: 450px;  /* Limita el ancho máximo de los campos */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #aaa; /* Gris más oscuro para el borde */
     border-radius: 5px;
     font-size: 14px;
+    box-sizing: border-box; /* Para que el padding no aumente el tamaño total */
 }
 
 /* Color negro para las opciones del select */
@@ -63,7 +67,7 @@ h1 {
     text-align: center;
     color: #333;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 /* Estilo del footer */
