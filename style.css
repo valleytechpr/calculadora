@@ -21,14 +21,14 @@ body {
 /* Estilo general para el formulario */
 #tax-calculator {
     max-width: 500px;  /* Tamaño máximo del formulario */
-    width: 90%;  /* Asegura que el formulario ocupe el 90% del ancho en pantallas pequeñas */
+    width: 100%;  /* Asegura que el formulario ocupe todo el ancho disponible */
     padding: 20px;
-    background: #f9f9f9;
+    background: #fff;  /* Fondo blanco */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     margin-top: 20px; /* Espacio entre el título y el formulario */
     box-sizing: border-box; /* Para que el padding no aumente el tamaño total */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra del borde */
 }
 
 /* Borde más oscuro en los campos */
@@ -49,7 +49,7 @@ body {
     -webkit-appearance: menulist-button; /* Asegura la apariencia estándar de la flecha en Chrome/Safari */
     -moz-appearance: none;
     appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><path d="M2 0L0 2h4L2 0z" fill="black"/></svg>') no-repeat right 10px center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><path d="M0 0L2 2L4 0H0z" fill="black"/></svg>') no-repeat right 10px center; /* Flecha hacia abajo */
     background-size: 10px;
 }
 
@@ -75,18 +75,21 @@ h1 {
     margin: 0;
 }
 
-/* Estilo del resultado */
-#result {
+/* Estilo del resultado dentro del formulario */
+#tax-calculator #result {
     text-align: center; /* Centra el texto dentro del resultado */
-    margin-top: 20px;
+    margin-top: 20px;  /* Espacio entre el formulario y el resultado */
     font-size: 16px;
     color: #333;
     line-height: 1.5;
     padding: 10px;
-    background: #e9e9e9;
+    background: #e9e9e9;  /* Fondo gris claro para el resultado */
     border-radius: 5px;
-    width: 100%;
-    max-width: 500px;
+    width: 90%;  /* Asegura que el resultado ocupe el 90% del ancho disponible */
+    margin: 20px auto;  /* Centra el resultado horizontalmente */
+    display: flex;  /* Uso de flexbox para centrar contenido */
+    justify-content: center;  /* Asegura que el texto esté centrado en el contenedor */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
 }
 
 /* Estilo del footer */
@@ -110,7 +113,7 @@ footer p {
 @media (max-width: 600px) {
     #tax-calculator {
         padding: 15px;
-        width: 90%;  /* Ajusta el ancho en pantallas pequeñas */
+        width: 100%;  /* Asegura que el formulario ocupe el 100% en pantallas pequeñas */
         max-width: 90%;  /* Asegura que el formulario no se expanda más allá del 90% */
         margin: 20px auto;  /* Centra el formulario */
     }
@@ -119,8 +122,11 @@ footer p {
         font-size: 20px;  /* Ajusta el tamaño del título en pantallas pequeñas */
     }
 
-    #result {
-        width: 90%;  /* Asegura que el resultado también sea responsivo */
-        margin: 20px auto;
+    /* Ajustes para el resultado en móvil */
+    #tax-calculator #result {
+        width: 90%;  /* Asegura que el resultado ocupe todo el ancho disponible en móviles */
+        margin: 20px auto;  /* Centra el resultado en dispositivos pequeños */
+        display: flex;
+        justify-content: center;
     }
 }
